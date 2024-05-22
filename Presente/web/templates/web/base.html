@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Presentes del día de la Fecha{% block titulo%}{%endblock%}</title>
+
+  {% block extra_ccs%}{%endblock%}
+</head>
+<body>
+    <header>
+        <h1> Los Presentes del día de la Fecha</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href= "{% url 'index'%}">Index</a></li>
+        <li><a href="{% url 'listado_personal'%}">Listado de Personal</a></li>
+      </ul>
+    </nav>
+
+    <p><h2>Bienvenido a su Puesto de Trabajo</h2></p>
+    <p>{{fecha_hora}}  </p>
+
+
+    <main>
+        {% block main%}{%endblock%}
+    </main> 
+    <foother>
+      <p> Todos los derechos Reservados a la Institución</p>
+    </foother>
+</body>
+</html>
